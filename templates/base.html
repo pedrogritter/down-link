@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--Basic Css for this page - Bulma Overide-->
+    <style>
+
+    </style>
 
 </head>
 <body>
 
  <!-- HERO SECTION -->
-      <section class="hero is-primary is-bold">
+      <section class="hero is-red is-bold">
        <div class="hero-body">
          <div class="container">
            <h1 class="title">
@@ -24,5 +28,47 @@
        </div>
       </section>
 
+ <!--//Website content-->
+<div class="container" id="main-container">
+     {% from "_formhelpers.html" import render_field %}
+     <form method="POST">
+         {{ form.csrf_token }}
+         {{ form.url.label }} {{ form.url(size=50) }}
+        <input class="button is-primary" type="submit" value="Go">
+     </form>
+
+
+     <!--<form method="POST" enctype="multipart/form-data" action="/">-->
+         <!--<h1>Give me the sauce plz?</h1>-->
+    <!--{{ form.url.label }} {{ form.url(size=500) }}-->
+    <!--<input class="button is-primary" type="submit" value="Go">-->
+<!--</form>-->
+
+
+</div>
+</div>
+
+  {% block content %}{% endblock %}
+
+<!-- FOOTER SECTION-->
+            <footer class="footer is-pulled-bottom has-background-dark">
+            <div class="container">
+              <div class="content has-text-centered is-centered has-text-white-ter">
+                <div id="tsp">
+                  <p>
+                    <a href="https://bulma.io">
+                    <img src="https://bulma.io/images/made-with-bulma--dark.png" alt="Made with Bulma" width="128" height="24">
+                    </a>
+                    <small>
+                          <br>
+                          Source code licensed <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.
+                          <br>
+                          Website content licensed <a rel="license" href="https://ciencias.ulisboa.pt/">Gritter</a>.
+                        </small>
+                  </p>
+                </div>
+              </div>
+            </div>
+        </footer>
 </body>
 </html>
