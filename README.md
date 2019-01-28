@@ -17,6 +17,10 @@ Resources & Documentation:
 Flask Documentation:
 http://flask.pocoo.org/docs/1.0/quickstart/
 
+Flask-Requests:
+http://flask.pocoo.org/docs/1.0/reqcontext/
+https://scotch.io/bar-talk/processing-incoming-request-data-in-flask
+
 Pytube Documentation:
 https://python-pytube.readthedocs.io/en/latest/user/quickstart.html
 
